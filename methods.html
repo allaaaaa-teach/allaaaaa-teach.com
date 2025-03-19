@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Криптография - Методы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="methods.html" class="active">Методы</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switch">
+            <button onclick="toggleTheme()">Сменить тему</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Методы шифрования</h1>
+
+        <section class="demo-section">
+            <h2>Демонстрация шифра Цезаря</h2>
+            <div class="cipher-demo">
+                <textarea id="inputText" placeholder="Введите текст для шифрования"></textarea>
+                <div class="controls">
+                    <input type="number" id="shift" value="3" min="1" max="25">
+                    <button onclick="encrypt()">Зашифровать</button>
+                    <button onclick="decrypt()">Расшифровать</button>
+                </div>
+                <div id="result" class="result-box"></div>
+            </div>
+        </section>
+
+        <section class="methods-list">
+            <h2>Основные методы шифрования</h2>
+            <div class="method-card">
+                <h3>Симметричное шифрование</h3>
+                <p>Использует один и тот же ключ для шифрования и дешифрования.</p>
+                <ul>
+                    <li>AES (Advanced Encryption Standard)</li>
+                    <li>DES (Data Encryption Standard)</li>
+                    <li>Blowfish</li>
+                </ul>
+            </div>
+
+            <div class="method-card">
+                <h3>Асимметричное шифрование</h3>
+                <p>Использует пару ключей: открытый и закрытый.</p>
+                <ul>
+                    <li>RSA</li>
+                    <li>DSA</li>
+                    <li>ECC (Elliptic Curve Cryptography)</li>
+                </ul>
+            </div>
+
+            <div class="method-card">
+                <h3>Хеширование</h3>
+                <p>Одностороннее преобразование данных в фиксированную длину.</p>
+                <ul>
+                    <li>MD5</li>
+                    <li>SHA-256</li>
+                    <li>SHA-3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resources">
+            <h2>Полезные ресурсы для изучения</h2>
+            <ul>
+                <li><a href="https://www.cryptography.com/en-us/security-essentials/" target="_blank">Основы безопасности от Cryptography.com</a></li>
+                <li><a href="https://www.ssl.com/guide/ssl-certificates-how-they-work/" target="_blank">Как работают SSL-сертификаты</a></li>
+                <li><a href="https://www.owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10 - Безопасность веб-приложений</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Мир Криптографии</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
